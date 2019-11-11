@@ -1,0 +1,29 @@
+
+.card-text{
+  font-size: 0.8em;
+}
+
+.card-link{
+  text-decoration: underline;
+}
+.card{
+  border-radius: 8px;
+  box-shadow: $shadow-1;
+  margin-bottom: 20px;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: -54px;
+  right: 0px;
+  bottom: 0px;
+  left: 91px;
+  padding: 1.25rem;
+}
+.card .card-content {
+  padding: 15px 15px 10px 15px;
+}
+
+.card .card-title, .card .stats, .card .category, .card .description, .card .social-line, .card .actions, .card .card-content, .card .card-footer, .card small, .card a {
+  position: relative;
+}

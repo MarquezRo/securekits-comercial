@@ -31,3 +31,20 @@ figure {
 }
 
 @import "tables";
+
+
+//skt
+
+/* fuente */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+label{
+	font-size: 0.8rem;
+}
+
+button, a {
+	&:focus {
+		outline: 0;
+	}
+}

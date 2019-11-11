@@ -18,3 +18,46 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+//skt código
+
+
+// Clase de texto
+@each $color-name,$color in $color-list {
+  .text-#{$color-name} {
+    color: $color !important;
+  }
+}
+// Clase de background
+@each $color-name,$color in $color-list {
+  .bg-#{$color-name} {
+    background-color: $color !important;
+  }
+}
+
+/* colors*/
+$color-primary: #2c2d74;
+$color-accent: #00fcc4;
+$color-secondary: #354e9d;
+$color-info: #a6dae8;
+$color-success: #229341;
+$color-danger: #c54413;
+$color-warning: #e9a210;
+$color-light: #e8eaf6;
+$color-dark: #212121;
+$color-grey: #dadada;
+
+/*color-list*/
+$color-list: (
+        "primary":$color-primary,
+        "accent":$color-accent,
+        "secondary":$color-secondary,
+        "info":$color-info,
+        "success":$color-success,
+        "danger":$color-danger,
+        "warning":$color-warning,
+        "light":$color-light,
+        "dark":$color-dark,
+        "grey":$color-grey,
+);
+

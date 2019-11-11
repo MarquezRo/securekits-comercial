@@ -1,3 +1,4 @@
+//estilo de plantilla
 button,
 input[type="button"],
 input[type="reset"],
@@ -20,3 +21,253 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+// clase boton
+.btn {
+	text-transform: uppercase !important;
+}
+
+
+.btn-lg {
+	padding: 1rem;
+}
+
+// Clase de botones 1
+
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name} {
+		background-color: $color;
+		border-color: $color;
+		padding-left: 15px;
+		padding-right: 15px;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// Clase de botones 1 hover
+
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name}:hover {
+		background-color: darken($color, 10%) !important;
+		border-color: darken($color, 10%) !important;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// Clase de botones outline
+
+@each $color-name, $color in $color-list {
+	.btn-outline-#{$color-name} {
+		color: $color;
+		border-color: $color;
+		border-radius: 5px;
+		border-width: 2px;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// Clase de botones outline hover
+
+@each $color-name, $color in $color-list {
+	.btn-outline-#{$color-name}:hover {
+		background-color: $color !important;
+		color: lighten($color, 50%) !important;
+		border-radius: 5px;
+		border-width: 2px;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+		border-color: $color !important;
+	}
+}
+
+// Clase de boton activo
+
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name}:not(:disabled):not(disabled):active, .btn-#{$color-name}:not(:disabled):not(.disabled).active, .show > .btn-#{$color-name}.dropdown-toggle {
+		background-color: $color !important;
+		color: lighten($color, 50%) !important;
+		border-color: $color !important;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// Clase de botones disabled
+
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name}:disabled {
+		background-color: darken($color, 10%) !important;
+		border-color: darken($color, 10%) !important;
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// boton standar focus
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name}:not(:disabled):not(.disabled):focus, .btn-#{$color-name}:not(:disabled):not(.disabled).active:focus, .show > .btn-#{$color-name}.dropdown-toggle:focus {
+		box-shadow: 0 0 0 0rem rgba($color, 0.5);
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// boton standar active
+@each $color-name, $color in $color-list {
+	.btn-#{$color-name}:not(:disabled):not(.disabled):active:focus, .btn-#{$color-name}:not(:disabled):not(.disabled).active:focus, .show > .btn-#{$color-name}.dropdown-toggle:focus {
+		box-shadow: 0 0 0 0.1rem rgba($color, 0.5);
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// boton outline focus
+@each $color-name, $color in $color-list {
+	.btn-outline-#{$color-name}:not(:disabled):not(.disabled):focus, .btn-outline-#{$color-name}:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-#{$color-name}.dropdown-toggle:focus {
+		box-shadow: 0 0 0 0rem rgba($color, 0.5);
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+	}
+}
+
+// boton outline active
+@each $color-name, $color in $color-list {
+	.btn-outline-#{$color-name}:not(:disabled):not(.disabled):active:focus, .btn-outline-#{$color-name}:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-#{$color-name}.dropdown-toggle:focus {
+		box-shadow: 0 0 0 0.1rem rgba($color, 0.5);
+		text-transform: capitalize;
+		font-size: 12px;
+		font-weight: 600;
+		background-color: darken($color, 10%);
+		border-color: darken($color, 10%);
+	}
+}
+
+@each $color-name, $color in $color-list {
+	.btn-outline-#{$color-name}:not(:disabled):not(.disabled):active, .btn-outline-#{$color-name}:not(:disabled):not(.disabled).active, .show > .btn-outline-#{$color-name}.dropdown-toggle {
+		color: #fff;
+		background-color: darken($color, 10%);
+		border-color: darken($color, 10%);
+	}
+}
+
+// estilo flaticon
+.btn-flaticon {
+	&::before {
+		font-size: 0.9rem !important;
+		margin-left: 0px !important;
+	}
+}
+
+// animación aumento
+.btn-magnify {
+	i {
+		-webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		display: inline-block;
+	}
+
+	&:hover {
+		i {
+			-webkit-transform: scale(1.22);
+			-moz-transform: scale(1.22);
+			-o-transform: scale(1.22);
+			-ms-transform: scale(1.22);
+			transform: scale(1.22);
+		}
+	}
+}
+
+// animacion giro
+.btn-rotate {
+	i {
+		-webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		position: relative;
+		display: inline-block;
+	}
+
+	&:hover {
+		i {
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+			-webkit-transform: rotate(53deg);
+			-ms-transform: rotate(53deg);
+			transform: rotate(53deg);
+		}
+	}
+}
+
+// animacion desplazamiento izquierda
+.btn-move-left {
+	i {
+		-webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		position: relative;
+		display: inline-block;
+	}
+
+	&:hover {
+		i {
+			-webkit-transform: translate3d(-5px, 0, 0);
+			-moz-transform: translate3d(-5px, 0, 0);
+			-o-transform: translate3d(-5px, 0, 0);
+			-ms-transform: translate3d(-5px, 0, 0);
+			transform: translate3d(-5px, 0, 0);
+		}
+	}
+}
+
+// animacion desplazamiento derecha
+.btn-move-right {
+	i {
+		-webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		-ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+		position: relative;
+		display: inline-block;
+	}
+
+	&:hover {
+		i {
+			-webkit-transform: translate3d(5px, 0, 0);
+			-moz-transform: translate3d(5px, 0, 0);
+			-o-transform: translate3d(5px, 0, 0);
+			-ms-transform: translate3d(5px, 0, 0);
+			transform: translate3d(5px, 0, 0);
+		}
+	}
+}
+
+.btn-group {
+	.btn {
+		border-radius: 20px;
+		border-width: 2px;
+		padding: 7px 18px;
+	}
+}
+
+
+
+
+

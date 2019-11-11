@@ -1,0 +1,15 @@
+
+// Clase de alertas
+@each $color-name,$color in $color-list {
+	.alert-#{$color-name} {
+		background-color: lighten($color,40%) !important;
+		color: darken($color,30%) !important;
+		border-color: lighten($color,10%) !important;
+	}
+}
+@each $color-name,$color in $color-list {
+	.alert-#{$color-name} .alert-link {
+		background-color: lighten($color,30%) !important;
+		color: darken($color,30%)  !important;
+		border-color: lighten($color,10%) !important;}
+}

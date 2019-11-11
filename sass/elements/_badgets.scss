@@ -1,0 +1,9 @@
+
+// Colores badget
+
+@each $color-name,$color in $color-list {
+ .badge-#{$color-name} {
+  background-color: $color;
+ }
+}
+
